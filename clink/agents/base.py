@@ -60,6 +60,7 @@ class BaseCLIAgent:
         system_prompt: str | None = None,
         files: Sequence[str],
         images: Sequence[str],
+        working_directory: str | None = None,
     ) -> AgentOutput:
         # Files and images are already embedded into the prompt by the tool; they are
         # accepted here only to keep parity with SimpleTool callers.
@@ -80,7 +81,8 @@ class BaseCLIAgent:
 
         sanitized_command = list(command)
 
-        cwd = str(self.client.working_dir) if self.client.working_dir else None
+        # Use provided working_directory if set, otherwise fall back to client config
+        cwd = working_directory or (str(self.client.working_dir) if self.client.working_dir else None)
         limit = DEFAULT_STREAM_LIMIT
 
         stdout_text = ""

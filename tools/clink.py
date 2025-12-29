@@ -38,6 +38,10 @@ class CLinkRequest(BaseModel):
         default=None,
         description="Optional role preset defined in the CLI configuration (defaults to 'default').",
     )
+    working_directory: str | None = Field(
+        default=None,
+        description="Absolute path to the working directory for the CLI. If provided, overrides the default configured in cli_clients.",
+    )
     absolute_file_paths: list[str] = Field(
         default_factory=list,
         description=COMMON_FIELD_DESCRIPTIONS["absolute_file_paths"],
@@ -140,6 +144,10 @@ class CLinkTool(SimpleTool):
                 "enum": self._all_roles or ["default"],
                 "description": role_description,
             },
+            "working_directory": {
+                "type": "string",
+                "description": "Absolute path to the working directory for the CLI. Pass your current working directory so the CLI can access workspace files.",
+            },
             "absolute_file_paths": SchemaBuilder.SIMPLE_FIELD_SCHEMAS["absolute_file_paths"],
             "images": SchemaBuilder.COMMON_FIELD_SCHEMAS["images"],
             "continuation_id": SchemaBuilder.COMMON_FIELD_SCHEMAS["continuation_id"],
@@ -211,6 +219,7 @@ class CLinkTool(SimpleTool):
                 system_prompt=system_prompt_text if system_prompt_text.strip() else None,
                 files=absolute_file_paths,
                 images=images,
+                working_directory=request.working_directory,
             )
         except CLIAgentError as exc:
             metadata = self._build_error_metadata(client_config, exc)
