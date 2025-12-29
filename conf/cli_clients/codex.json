@@ -4,6 +4,7 @@
   "additional_args": [
     "--json",
     "--dangerously-bypass-approvals-and-sandbox",
+    "--skip-git-repo-check",
     "--enable",
     "web_search_request"
   ],
