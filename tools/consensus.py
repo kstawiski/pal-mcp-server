@@ -247,7 +247,7 @@ of the evidence, even when it strongly points in one direction.""",
             },
             "model_responses": {
                 "type": "array",
-                "items": {"type": "object"},
+                "items": {"type": "object", "properties": {}, "additionalProperties": True},
                 "description": CONSENSUS_WORKFLOW_FIELD_DESCRIPTIONS["model_responses"],
             },
             "images": {

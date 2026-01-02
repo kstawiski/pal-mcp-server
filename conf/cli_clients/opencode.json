@@ -1,0 +1,46 @@
+{
+  "name": "opencode",
+  "command": "opencode-stdin",
+  "additional_args": [],
+  "env": {
+    "XDG_DATA_HOME": "/root/.local/share",
+    "XDG_CONFIG_HOME": "/root/.config"
+  },
+  "roles": {
+    "default": {
+      "prompt_path": "systemprompts/clink/default.txt",
+      "role_args": ["--model", "google/gemini-3-flash-high"],
+      "description": "Gemini 3 Flash with high thinking (default)"
+    },
+    "gemini-3-pro": {
+      "prompt_path": "systemprompts/clink/default.txt",
+      "role_args": ["--model", "google/gemini-3-pro-high"],
+      "description": "Gemini 3 Pro with high thinking"
+    },
+    "gemini-2.5-flash": {
+      "prompt_path": "systemprompts/clink/default.txt",
+      "role_args": ["--model", "google/gemini-2.5-flash"],
+      "description": "Gemini 2.5 Flash"
+    },
+    "claude-sonnet": {
+      "prompt_path": "systemprompts/clink/default.txt",
+      "role_args": ["--model", "google/gemini-claude-sonnet-4-5-thinking-high"],
+      "description": "Claude Sonnet 4.5 via Antigravity"
+    },
+    "claude-opus": {
+      "prompt_path": "systemprompts/clink/default.txt",
+      "role_args": ["--model", "google/gemini-claude-opus-4-5-thinking-high"],
+      "description": "Claude Opus 4.5 via Antigravity"
+    },
+    "planner": {
+      "prompt_path": "systemprompts/clink/default_planner.txt",
+      "role_args": ["--model", "google/gemini-3-pro-high"],
+      "description": "Planning role with Gemini 3 Pro"
+    },
+    "codereviewer": {
+      "prompt_path": "systemprompts/clink/default_codereviewer.txt",
+      "role_args": ["--model", "google/gemini-3-pro-high"],
+      "description": "Code review role with Gemini 3 Pro"
+    }
+  }
+}

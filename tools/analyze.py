@@ -224,7 +224,7 @@ class AnalyzeTool(WorkflowTool):
             },
             "issues_found": {
                 "type": "array",
-                "items": {"type": "object"},
+                "items": {"type": "object", "properties": {}, "additionalProperties": True},
                 "description": "Issues or concerns identified during analysis, each with severity level (critical, high, medium, low)",
             },
             "analysis_type": {

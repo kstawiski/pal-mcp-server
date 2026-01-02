@@ -226,7 +226,7 @@ class RefactorTool(WorkflowTool):
             },
             "issues_found": {
                 "type": "array",
-                "items": {"type": "object"},
+                "items": {"type": "object", "properties": {}, "additionalProperties": True},
                 "description": REFACTOR_FIELD_DESCRIPTIONS["issues_found"],
             },
             "images": {

@@ -60,7 +60,7 @@ class WorkflowSchemaBuilder:
         },
         "issues_found": {
             "type": "array",
-            "items": {"type": "object"},
+            "items": {"type": "object", "properties": {}, "additionalProperties": True},
             "description": WORKFLOW_FIELD_DESCRIPTIONS["issues_found"],
         },
         "confidence": {

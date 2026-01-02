@@ -394,7 +394,7 @@ class SecauditTool(WorkflowTool):
             },
             "issues_found": {
                 "type": "array",
-                "items": {"type": "object"},
+                "items": {"type": "object", "properties": {}, "additionalProperties": True},
                 "description": SECAUDIT_WORKFLOW_FIELD_DESCRIPTIONS["issues_found"],
             },
             "images": {
