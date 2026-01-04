@@ -9,38 +9,38 @@
   "roles": {
     "default": {
       "prompt_path": "systemprompts/clink/default.txt",
-      "role_args": ["--model", "google/gemini-3-flash-high"],
-      "description": "Gemini 3 Flash with high thinking (default)"
+      "role_args": ["--model", "antigravity/gemini-3-flash"],
+      "description": "Gemini 3 Flash via Antigravity (default)"
     },
     "gemini-3-pro": {
       "prompt_path": "systemprompts/clink/default.txt",
-      "role_args": ["--model", "google/gemini-3-pro-high"],
-      "description": "Gemini 3 Pro with high thinking"
+      "role_args": ["--model", "antigravity/gemini-3-pro-high"],
+      "description": "Gemini 3 Pro with high thinking via Antigravity"
     },
     "gemini-2.5-flash": {
       "prompt_path": "systemprompts/clink/default.txt",
-      "role_args": ["--model", "google/gemini-2.5-flash"],
-      "description": "Gemini 2.5 Flash"
+      "role_args": ["--model", "antigravity/gemini-2.5-flash"],
+      "description": "Gemini 2.5 Flash via Antigravity"
     },
     "claude-sonnet": {
       "prompt_path": "systemprompts/clink/default.txt",
-      "role_args": ["--model", "google/gemini-claude-sonnet-4-5-thinking-high"],
+      "role_args": ["--model", "antigravity/claude-sonnet-4-5-thinking"],
       "description": "Claude Sonnet 4.5 via Antigravity"
     },
     "claude-opus": {
       "prompt_path": "systemprompts/clink/default.txt",
-      "role_args": ["--model", "google/gemini-claude-opus-4-5-thinking-high"],
+      "role_args": ["--model", "antigravity/claude-opus-4-5-thinking"],
       "description": "Claude Opus 4.5 via Antigravity"
     },
     "planner": {
       "prompt_path": "systemprompts/clink/default_planner.txt",
-      "role_args": ["--model", "google/gemini-3-pro-high"],
-      "description": "Planning role with Gemini 3 Pro"
+      "role_args": ["--model", "antigravity/gemini-3-pro-high"],
+      "description": "Planning role with Gemini 3 Pro via Antigravity"
     },
     "codereviewer": {
       "prompt_path": "systemprompts/clink/default_codereviewer.txt",
-      "role_args": ["--model", "google/gemini-3-pro-high"],
-      "description": "Code review role with Gemini 3 Pro"
+      "role_args": ["--model", "antigravity/gemini-3-pro-high"],
+      "description": "Code review role with Gemini 3 Pro via Antigravity"
     }
   }
 }
